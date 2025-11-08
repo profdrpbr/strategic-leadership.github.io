@@ -5,25 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Module 1 – Leadership in the Sustainability Era</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header { background: #004466; color: white; text-align: center; padding: 1em; }
-    nav { background: #006680; text-align: center; padding: 0.6em; position: sticky; top: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #004466; color: white; text-align: center; padding: 1.2em 0; }
+    nav { background: #006680; text-align: center; padding: 0.5em; position: sticky; top: 0; z-index: 1000; }
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
     nav a:hover { text-decoration: underline; }
-    section { max-width: 900px; background: white; margin: 20px auto; padding: 20px; border-radius: 10px; }
+    section { padding: 20px; background: white; margin: 15px auto; max-width: 900px; border-radius: 10px; }
     h2 { color: #004466; }
-    iframe { width: 100%; height: 600px; border: none; border-radius: 8px; }
-    .download { text-align: center; margin-top: 15px; }
-    .download a { background: #004466; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; }
-    .download a:hover { background: #006680; }
+    footer { text-align: center; background: #004466; color: white; padding: 1em; margin-top: 30px; }
+    .pdf-viewer {
+      width: 100%;
+      height: 800px;
+      border: 2px solid #004466;
+      border-radius: 10px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #006680;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #004466;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Module 1 – Leadership in the Sustainability Era</h1>
-    <p>Strategic Leadership for Sustainable Entrepreneurship</p>
+    <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
+    <p>Module 1: Leadership in the Sustainability Era</p>
   </header>
 
+  <!-- Navigation Menu -->
   <nav>
     <a href="index.html">Syllabus</a>
     <a href="tlep.html">TLEP</a>
@@ -35,20 +54,26 @@
     <a href="queries.html">Queries</a>
   </nav>
 
+  <!-- Module 1 Content -->
   <section>
-    <h2>📘 View Lecture Slides: Leadership in the Sustainability Era</h2>
-    <p>Below is the embedded lecture material for this module. You can scroll through or download it for offline study.</p>
+    <h2>📘 Module 1: Leadership in the Sustainability Era</h2>
+    <p>
+      This module explores strategic leadership frameworks, sustainability challenges,
+      visionary thinking, and decision-making models for sustainable business success.
+      The lecture slides are available below and can be viewed directly on this page or downloaded.
+    </p>
 
-    <!-- Embedded PDF -->
-    <iframe src="Leadership.pdf"></iframe>
+    <h3>📖 View Lecture Slides (Embedded)</h3>
+    <!-- Embed the Leadership PDF (must be uploaded in the same GitHub repo) -->
+    <iframe src="Leadership.pdf" class="pdf-viewer"></iframe>
 
-    <div class="download">
-      <a href="Leadership.pdf" download>📥 Download Leadership PDF</a>
+    <div style="text-align:center;">
+      <a href="Leadership.pdf" download class="download-btn">⬇️ Download Leadership PDF</a>
     </div>
   </section>
 
-  <footer style="text-align:center; background:#004466; color:white; padding:10px; margin-top:20px;">
-    © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship
+  <footer>
+    <p>© 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship</p>
   </footer>
 </body>
 </html>
