@@ -7,7 +7,7 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
     header { background: #004466; color: white; text-align: center; padding: 1.2em 0; }
-    nav { background: #006680; text-align: center; padding: 0.5em; }
+    nav { background: #006680; text-align: center; padding: 0.5em; position: sticky; top: 0; z-index: 1000; }
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
     nav a:hover { text-decoration: underline; }
     section { padding: 20px; background: white; margin: 15px auto; max-width: 900px; border-radius: 10px; }
@@ -26,6 +26,7 @@
     <a href="module2_change.html">Change Management</a>
     <a href="module3_sustainability.html">Sustainability</a>
     <a href="module4_research.html">Research Methods</a>
+    <a href="tlep.html">TLEP</a>
   </nav>
 
   <section>
