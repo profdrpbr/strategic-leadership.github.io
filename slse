@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Leadership for Sustainable Entrepreneurship</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #004466; color: white; text-align: center; padding: 1.2em 0; }
+    nav { background: #006680; text-align: center; padding: 0.5em; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 20px; background: white; margin: 15px auto; max-width: 900px; border-radius: 10px; }
+    footer { text-align: center; background: #004466; color: white; padding: 1em; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
+    <p>Course Materials & Modules</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="module1_innovation.html">Innovation</a>
+    <a href="module2_change.html">Change Management</a>
+    <a href="module3_sustainability.html">Sustainability</a>
+    <a href="module4_research.html">Research Methods</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to the Course</h2>
+    <p>This website hosts learning resources and materials for <b>Strategic Leadership for Sustainable Entrepreneurship</b>.</p>
+    <ul>
+      <li>Module 1: Innovation and Entrepreneurship</li>
+      <li>Module 2: Change and Transformation</li>
+      <li>Module 3: Sustainable Business Leadership</li>
+      <li>Module 4: Applied Research & Project Development</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Prof. P. B. Rao | Strategic Leadership Course</p>
+  </footer>
+</body>
+</html>
