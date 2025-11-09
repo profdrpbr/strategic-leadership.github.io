@@ -13,13 +13,15 @@
     section { padding: 20px; background: white; margin: 15px auto; max-width: 900px; border-radius: 10px; }
     h2 { color: #004466; }
     footer { text-align: center; background: #004466; color: white; padding: 1em; margin-top: 30px; }
+
     .pdf-viewer {
       width: 100%;
       height: 800px;
       border: 2px solid #004466;
       border-radius: 10px;
     }
-    .download-btn {
+
+    .download-btn, .back-btn {
       display: inline-block;
       margin-top: 20px;
       background: #006680;
@@ -30,8 +32,14 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-    .download-btn:hover {
+
+    .download-btn:hover, .back-btn:hover {
       background: #004466;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 25px;
     }
   </style>
 </head>
@@ -48,9 +56,10 @@
     <a href="tlep.html">TLEP</a>
     <a href="module1.html">Module 1</a>
     <a href="module2.html">Module 2</a>
-    <a href="module3.html">Module 3</a>
+    <a href="module3.html" class="active">Module 3</a>
     <a href="module4.html">Module 4</a>
     <a href="module5.html">Module 5</a>
+    <a href="questionbank.html">Question Bank</a>
     <a href="queries.html">Queries</a>
   </nav>
 
@@ -58,9 +67,9 @@
   <section>
     <h2>📘 Module 3: Leadership Skills for Sustainability</h2>
     <p>
-      This module focuses on developing visionary, transformational, and ethical leadership 
+      This module focuses on developing <strong>visionary, transformational, and ethical leadership</strong> 
       capabilities required for driving sustainable change. Students explore frameworks for 
-      team leadership, ethical decision-making, and performance enhancement in 
+      <strong>team leadership, ethical decision-making, and performance enhancement</strong> in 
       sustainability-focused organizations. 
       The full lecture material can be viewed below or downloaded.
     </p>
@@ -69,8 +78,9 @@
     <!-- Embed the Module 3 PDF (must be uploaded in the same GitHub repo) -->
     <iframe src="Module 3.pdf" class="pdf-viewer"></iframe>
 
-    <div style="text-align:center;">
+    <div class="btn-container">
       <a href="Module 3.pdf" download class="download-btn">⬇️ Download Module 3 PDF</a>
+      <a href="index.html" class="back-btn">🏠 Back to Home (Syllabus)</a>
     </div>
   </section>
 
