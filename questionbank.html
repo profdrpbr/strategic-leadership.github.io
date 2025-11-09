@@ -17,14 +17,39 @@
     user-select: none; /* disables text copy */
   }
 
+  /* ---------- HEADER ---------- */
   header {
     background: linear-gradient(90deg, #00334d, #006680);
     color: white;
-    text-align: center;
-    padding: 1.8em 0;
+    padding: 1.4em 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .logo {
+    height: 65px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+  }
+  .header-text h1 {
+    font-size: 1.9em;
+    margin: 0;
+    letter-spacing: 0.8px;
+  }
+  .header-text p {
+    margin: 0;
+    font-size: 1em;
+    opacity: 0.9;
+  }
 
+  /* ---------- NAVIGATION ---------- */
   nav {
     background: #004d66;
     text-align: center;
@@ -33,7 +58,6 @@
     top: 0;
     z-index: 1000;
   }
-
   nav a {
     color: #f0f0f0;
     text-decoration: none;
@@ -44,10 +68,10 @@
     border-radius: 6px;
     transition: all 0.3s;
   }
-
   nav a:hover { background: #00a8cc; color: #fff; }
   nav a.active { background: #007799; color: #fff; }
 
+  /* ---------- SECTION ---------- */
   section {
     padding: 25px;
     background: white;
@@ -57,23 +81,7 @@
     box-shadow: 0 0 12px rgba(0,0,0,0.1);
     position: relative;
   }
-
   h2 { color: #004466; border-left: 5px solid #00a8cc; padding-left: 10px; }
-
-  footer {
-    text-align: center;
-    background: #00334d;
-    color: #eee;
-    padding: 15px;
-    margin-top: 40px;
-  }
-
-  .pdf-frame {
-    width: 100%;
-    height: 850px;
-    border: 2px solid #004466;
-    border-radius: 10px;
-  }
 
   .notice {
     background: #e6f9ff;
@@ -83,40 +91,11 @@
     border-radius: 6px;
   }
 
-  /* Watermark overlay */
-  .watermark {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .pdf-frame {
     width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 999;
-    background: repeating-linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.05) 0,
-      rgba(0, 0, 0, 0.05) 2px,
-      transparent 2px,
-      transparent 50px
-    );
-    color: rgba(0, 0, 0, 0.1);
-    font-size: 2rem;
-    text-align: center;
-    line-height: 200vh;
-    transform: rotate(-20deg);
-  }
-
-  /* Black screen effect */
-  .blackout {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 10000;
-    opacity: 0.9;
-    display: none;
+    height: 850px;
+    border: 2px solid #004466;
+    border-radius: 10px;
   }
 
   .back-btn {
@@ -130,15 +109,57 @@
     margin-top: 20px;
   }
   .back-btn:hover { background: #004466; }
+
+  /* ---------- WATERMARK ---------- */
+  .watermark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    background: url('logo.png') center center no-repeat;
+    background-size: 500px auto;
+    opacity: 0.05;
+  }
+
+  /* ---------- BLACKOUT ON SCREENSHOT ---------- */
+  .blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 10000;
+    opacity: 0.9;
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+    background: #00334d;
+    color: #eee;
+    padding: 15px;
+    margin-top: 40px;
+  }
 </style>
 </head>
 
 <body>
+  <!-- ✅ HEADER WITH LOGO -->
   <header>
-    <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
-    <p>Question Bank | Jain (Deemed-to-be University)</p>
+    <div class="header-container">
+      <img src="logo.png" alt="Jain University Logo" class="logo">
+      <div class="header-text">
+        <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
+        <p>Question Bank | Jain (Deemed-to-be University)</p>
+      </div>
+    </div>
   </header>
 
+  <!-- NAVIGATION BAR -->
   <nav>
     <a href="index.html">Syllabus</a>
     <a href="tlep.html">TLEP</a>
@@ -151,6 +172,7 @@
     <a href="queries.html">Queries</a>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <section>
     <h2>📘 Question Bank (Protected View)</h2>
     <p class="notice">
@@ -164,7 +186,8 @@
     </div>
   </section>
 
-  <div class="watermark">Protected Content – Jain (Deemed-to-be University)</div>
+  <!-- WATERMARK + BLACKOUT OVERLAY -->
+  <div class="watermark"></div>
   <div class="blackout" id="blackout"></div>
 
   <footer>
@@ -172,7 +195,7 @@
   </footer>
 
   <script>
-    // Disable context menu and keyboard shortcuts
+    // Disable right-click & shortcuts
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', e => {
       const blocked = ['s','p','u','c','x','a'];
@@ -182,14 +205,14 @@
       }
     });
 
-    // Fake blackout screen when PrintScreen detected
+    // Blackout effect when PrintScreen or capture attempt is detected
     function triggerBlackout() {
       const blackout = document.getElementById('blackout');
       blackout.style.display = 'block';
       setTimeout(() => blackout.style.display = 'none', 2500);
     }
 
-    // Continuous clipboard clearing
+    // Auto clear clipboard
     setInterval(() => navigator.clipboard.writeText(''), 1000);
   </script>
 </body>
