@@ -9,7 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Poppins', sans-serif; margin:0; background:#f3f9fb; color:#333; line-height:1.6; }
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      margin: 0; 
+      background: #f3f9fb; 
+      color: #333; 
+      line-height: 1.6; 
+    }
 
     /* ---------- HEADER WITH LOGO ---------- */
     header {
@@ -18,6 +24,7 @@
       padding: 1.5em 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
+
     .header-container {
       display: flex;
       align-items: center;
@@ -26,41 +33,92 @@
       flex-wrap: wrap;
       text-align: center;
     }
+
     .logo {
       height: 70px;
       width: auto;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(255,255,255,0.3);
     }
+
     .header-text h1 {
       font-size: 1.9em;
       margin: 0;
       letter-spacing: 1px;
     }
+
     .header-text p {
       margin: 0;
       opacity: 0.9;
       font-size: 1em;
     }
+
     @media (max-width: 768px) {
       .logo { height: 55px; }
       .header-text h1 { font-size: 1.4em; }
     }
 
     /* ---------- NAVIGATION ---------- */
-    nav { background:#004d66; text-align:center; padding:0.8em 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    nav a { color:#f0f0f0; text-decoration:none; margin:0 14px; font-weight:600; padding:6px 12px; border-radius:6px; transition:0.3s; }
-    nav a:hover, nav a.active { background:#00a8cc; color:#fff; }
+    nav {
+      background: #004d66;
+      text-align: center;
+      padding: 0.8em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background: #00a8cc;
+      color: #fff;
+    }
 
     /* ---------- CONTENT ---------- */
-    section { padding:25px; background:white; margin:25px auto; max-width:950px; border-radius:12px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-    h2 { color:#004466; border-left:5px solid #00a8cc; padding-left:10px; margin-top:25px; }
-    h3 { color:#004466; margin-top:20px; }
-    ul, ol { line-height:1.8; }
-    .module { margin-top:25px; }
+    section {
+      padding: 25px;
+      background: white;
+      margin: 25px auto;
+      max-width: 950px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004466;
+      border-left: 5px solid #00a8cc;
+      padding-left: 10px;
+      margin-top: 25px;
+    }
+
+    h3 {
+      color: #004466;
+      margin-top: 20px;
+    }
+
+    ul, ol { line-height: 1.8; }
+    .module { margin-top: 25px; }
 
     /* ---------- FOOTER ---------- */
-    footer { text-align:center; background:#00334d; color:#eee; padding:15px; margin-top:40px; font-size:0.9em; letter-spacing:0.3px; }
+    footer {
+      text-align: center;
+      background: #00334d;
+      color: #eee;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      letter-spacing: 0.3px;
+    }
   </style>
 </head>
 
@@ -69,7 +127,6 @@
   <!-- ✅ HEADER WITH LOGO -->
   <header>
     <div class="header-container">
-      <!-- Change 'logo.png' to your actual file name -->
       <img src="logo.png" alt="Jain University Logo" class="logo">
       <div class="header-text">
         <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
@@ -78,7 +135,7 @@
     </div>
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- ✅ NAVIGATION BAR -->
   <nav>
     <a href="index.html" class="active">Syllabus</a>
     <a href="tlep.html">TLEP</a>
@@ -91,7 +148,7 @@
     <a href="queries.html">Queries</a>
   </nav>
 
-  <!-- MAIN SYLLABUS SECTION -->
+  <!-- ✅ MAIN CONTENT -->
   <section>
     <h2>📘 Course Syllabus</h2>
     <p>
@@ -132,12 +189,4 @@
       <li>Dyllick, T., & Muff, K. (2016). <i>The Business Guide to the Sustainable Development Goals: Global Corporate Responsibility</i> (1st ed.). Springer.</li>
       <li>Kern, F., & Hoppmann, J. (2018). <i>Innovation and Sustainability in Business: Challenges and Opportunities</i>. Springer.</li>
       <li>Schaltegger, S., & Wagner, M. (2017). <i>Managing the Transition to a Sustainable Economy: A Systems Approach to Business</i> (1st ed.). Routledge.</li>
-      <li>Rockström, J., Steffen, W., Noone, K., Persson, Å., Chapin, F. S., Lambin, E. F., … & Foley, J. A. (2009). <i>Planetary Boundaries: Exploring the Safe Operating Space for Humanity</i>. <b>Ecology and Society</b>, 14(2), 32.</li>
-    </ol>
-  </section>
-
-  <footer>
-    © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship | Jain (Deemed-to-be University)
-  </footer>
-</body>
-</html>
+      <li>Rockström, J.,
