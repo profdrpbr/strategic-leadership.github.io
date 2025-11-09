@@ -3,34 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module 5 | Strategic Leadership for Sustainable Entrepreneurship</title>
-
-  <!-- Google Font -->
+  <title>Course Gallery | Strategic Leadership for Sustainable Entrepreneurship</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: #f3f9fb;
       color: #333;
-      line-height: 1.6;
     }
-
     header {
       background: linear-gradient(90deg, #00334d, #006680);
       color: white;
       text-align: center;
       padding: 1.8em 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
-    header h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.3em;
-      letter-spacing: 1px;
-    }
-
     nav {
       background: #004d66;
       text-align: center;
@@ -38,74 +25,50 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     nav a {
       color: #f0f0f0;
       text-decoration: none;
       margin: 0 14px;
       font-weight: 600;
-      font-size: 0.95em;
-      letter-spacing: 0.3px;
-      transition: all 0.3s ease;
       padding: 6px 10px;
       border-radius: 5px;
     }
-
     nav a:hover {
       background: #00a8cc;
       color: #fff;
-      padding: 6px 14px;
     }
-
     nav a.active {
       background: #007799;
       color: #fff;
     }
-
     section {
       padding: 25px;
       background: white;
       margin: 25px auto;
-      max-width: 900px;
+      max-width: 950px;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      text-align: center;
     }
-
     h2 {
       color: #004466;
-      font-weight: 600;
-      margin-bottom: 10px;
+      text-align: center;
+      margin-bottom: 20px;
     }
-
-    .notice {
-      background: #e6f9ff;
-      display: inline-block;
-      padding: 15px 25px;
-      border-left: 4px solid #00a8cc;
-      border-radius: 8px;
-      margin-top: 20px;
-      font-size: 1.05em;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
     }
-
-    .button {
-      display: inline-block;
-      background: #007799;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 30px;
-      transition: background 0.3s ease;
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
     }
-
-    .button:hover {
-      background: #004d66;
+    .gallery img:hover {
+      transform: scale(1.05);
     }
-
     footer {
       text-align: center;
       background: #00334d;
@@ -113,43 +76,45 @@
       padding: 15px;
       margin-top: 40px;
       font-size: 0.9em;
-      letter-spacing: 0.3px;
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
-    <p>Module 5: Global Frameworks and Trends</p>
-  </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Syllabus</a>
-    <a href="tlep.html">TLEP</a>
-    <a href="module1.html">Module 1</a>
-    <a href="module2.html">Module 2</a>
-    <a href="module3.html">Module 3</a>
-    <a href="module4.html">Module 4</a>
-    <a href="module5.html" class="active">Module 5</a>
-    <a href="questionbank.html">Question Bank</a>
-    <a href="queries.html">Queries</a>
-  </nav>
+<header>
+  <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
+  <p>Visual Gallery & Course Highlights</p>
+</header>
 
-  <section>
-    <h2>🚧 Page Under Construction</h2>
-    <p class="notice">
-      The content for <strong>Module 5: Global Frameworks and Trends</strong> is currently being updated.  
-      Please check back soon for the full material.
-    </p>
+<nav>
+  <a href="index.html">Syllabus</a>
+  <a href="tlep.html">TLEP</a>
+  <a href="module1.html">Module 1</a>
+  <a href="module2.html">Module 2</a>
+  <a href="module3.html">Module 3</a>
+  <a href="module4.html">Module 4</a>
+  <a href="module5.html">Module 5</a>
+  <a href="questionbank.html">Question Bank</a>
+  <a href="image.html" class="active">Gallery</a>
+  <a href="queries.html">Queries</a>
+</nav>
 
-    <!-- Back Button -->
-    <a href="index.html" class="button">⬅️ Back to Dashboard</a>
-  </section>
+<section>
+  <h2>📸 Course Image Gallery</h2>
+  <p style="text-align:center;">Explore visual highlights, key diagrams, and course moments from <strong>Strategic Leadership for Sustainable Entrepreneurship</strong>.</p>
 
-  <footer>
-    © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship | Jain (Deemed-to-be University)
-  </footer>
+  <div class="gallery">
+    <img src="gallery1.jpg" alt="Leadership Session">
+    <img src="gallery2.jpg" alt="Sustainability Workshop">
+    <img src="gallery3.jpg" alt="Innovation Discussion">
+    <img src="gallery4.jpg" alt="Group Project">
+    <img src="gallery5.jpg" alt="Research Presentation">
+  </div>
+</section>
+
+<footer>
+  © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship | Jain (Deemed-to-be University)
+</footer>
+
 </body>
 </html>
