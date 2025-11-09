@@ -1,17 +1,114 @@
-<!-- Queries Tab with Formspree -->
-<div id="queries" class="tab-content">
-  <h2>Submit Your Query</h2>
-  <form action="https://formspree.io/f/xyznnljn" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queries | Strategic Leadership for Sustainable Entrepreneurship</title>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="_replyto" required>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <label for="query">Your Query:</label>
-    <textarea id="query" name="query" required></textarea>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f3f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
 
-    <button type="submit">Submit</button>
-  </form>
-  <p style="color:green; margin-top:10px;">Your query will be sent directly to Dr. Bhujanga Rao.</p>
-</div>
+    /* Header with logo */
+    header {
+      background: linear-gradient(90deg, #00334d, #006680);
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+    }
+
+    nav {
+      background: #004d66;
+      text-align: center;
+      padding: 0.8em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active { background: #00a8cc; color: #fff; }
+
+    section {
+      padding: 25px;
+      background: white;
+      margin: 25px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004466;
+      border-left: 5px solid #00a8cc;
+      padding-left: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #004466;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: 'Poppins', sans-serif;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      background: #006680;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-siz
