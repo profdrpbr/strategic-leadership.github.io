@@ -215,15 +215,27 @@
       const blocked = ['s','p','u','c','x','a'];
       if ((e.ctrlKey && blocked.includes(e.key.toLowerCase())) || e.key === 'PrintScreen') {
         e.preventDefault();
-        triggerBlackout();
+        showWarning();
       }
     });
 
-    // Blackout effect when screenshot attempt detected
-    function triggerBlackout() {
-      const blackout = document.getElementById('blackout');
-      blackout.style.display = 'block';
-      setTimeout(() => blackout.style.display = 'none', 2500);
+    // Show warning message on screenshot or shortcut attempt
+    function showWarning() {
+      const warn = document.createElement('div');
+      warn.textContent = "⚠️ You are not supposed to take screenshots or download this academic material.";
+      warn.style.position = 'fixed';
+      warn.style.top = '50%';
+      warn.style.left = '50%';
+      warn.style.transform = 'translate(-50%, -50%)';
+      warn.style.background = 'rgba(0,0,0,0.85)';
+      warn.style.color = 'white';
+      warn.style.padding = '20px 30px';
+      warn.style.borderRadius = '10px';
+      warn.style.fontSize = '1rem';
+      warn.style.zIndex = '10000';
+      warn.style.textAlign = 'center';
+      document.body.appendChild(warn);
+      setTimeout(() => warn.remove(), 2500);
     }
 
     // Clear clipboard periodically
