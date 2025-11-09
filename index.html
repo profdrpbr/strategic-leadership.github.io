@@ -3,21 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Gallery | Strategic Leadership for Sustainable Entrepreneurship</title>
+  <title>Question Bank | Strategic Leadership for Sustainable Entrepreneurship</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background: #f3f9fb;
       color: #333;
+      line-height: 1.6;
+      user-select: none; /* disable text selection */
     }
+
     header {
       background: linear-gradient(90deg, #00334d, #006680);
       color: white;
       text-align: center;
       padding: 1.8em 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+      letter-spacing: 1px;
+    }
+
     nav {
       background: #004d66;
       text-align: center;
@@ -25,23 +39,32 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     nav a {
       color: #f0f0f0;
       text-decoration: none;
       margin: 0 14px;
       font-weight: 600;
+      font-size: 0.95em;
+      letter-spacing: 0.3px;
+      transition: all 0.3s ease;
       padding: 6px 10px;
       border-radius: 5px;
     }
+
     nav a:hover {
       background: #00a8cc;
       color: #fff;
+      padding: 6px 14px;
     }
+
     nav a.active {
       background: #007799;
       color: #fff;
     }
+
     section {
       padding: 25px;
       background: white;
@@ -50,25 +73,30 @@
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #004466;
-      text-align: center;
+      border-left: 5px solid #00a8cc;
+      padding-left: 10px;
+      font-weight: 600;
+    }
+
+    .notice {
+      background: #e6f9ff;
+      padding: 10px 15px;
+      border-left: 4px solid #00a8cc;
       margin-bottom: 20px;
+      border-radius: 6px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
+
+    .qb-image {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      pointer-events: none; /* disable drag */
     }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+
     footer {
       text-align: center;
       background: #00334d;
@@ -76,45 +104,67 @@
       padding: 15px;
       margin-top: 40px;
       font-size: 0.9em;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
-<body>
 
-<header>
-  <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
-  <p>Visual Gallery & Course Highlights</p>
-</header>
+<body oncontextmenu="return false;">
+  <header>
+    <h1>Strategic Leadership for Sustainable Entrepreneurship</h1>
+    <p>Protected Question Bank | Jain (Deemed-to-be University)</p>
+  </header>
 
-<nav>
-  <a href="index.html">Syllabus</a>
-  <a href="tlep.html">TLEP</a>
-  <a href="module1.html">Module 1</a>
-  <a href="module2.html">Module 2</a>
-  <a href="module3.html">Module 3</a>
-  <a href="module4.html">Module 4</a>
-  <a href="module5.html">Module 5</a>
-  <a href="questionbank.html">Question Bank</a>
-  <a href="image.html" class="active">Gallery</a>
-  <a href="queries.html">Queries</a>
-</nav>
+  <!-- Navigation with Question Bank before Queries -->
+  <nav>
+    <a href="index.html">Syllabus</a>
+    <a href="tlep.html">TLEP</a>
+    <a href="module1.html">Module 1</a>
+    <a href="module2.html">Module 2</a>
+    <a href="module3.html">Module 3</a>
+    <a href="module4.html">Module 4</a>
+    <a href="module5.html">Module 5</a>
+    <a href="questionbank.html" class="active">Question Bank</a>
+    <a href="queries.html">Queries</a>
+  </nav>
 
-<section>
-  <h2>📸 Course Image Gallery</h2>
-  <p style="text-align:center;">Explore visual highlights, key diagrams, and course moments from <strong>Strategic Leadership for Sustainable Entrepreneurship</strong>.</p>
+  <section>
+    <h2>📘 Question Bank (Read-Only)</h2>
+    <p class="notice">
+      This section contains the consolidated <strong>Question Bank</strong> for the course.  
+      Viewing is restricted — downloading, copying, printing, and screenshots are disabled.
+    </p>
 
-  <div class="gallery">
-    <img src="gallery1.jpg" alt="Leadership Session">
-    <img src="gallery2.jpg" alt="Sustainability Workshop">
-    <img src="gallery3.jpg" alt="Innovation Discussion">
-    <img src="gallery4.jpg" alt="Group Project">
-    <img src="gallery5.jpg" alt="Research Presentation">
-  </div>
-</section>
+    <!-- Watermarked Image Pages -->
+    <div id="qb-container" style="text-align:center;">
+      <img src="qb_page1.jpg" alt="Question Bank Page 1" class="qb-image">
+      <img src="qb_page2.jpg" alt="Question Bank Page 2" class="qb-image">
+      <img src="qb_page3.jpg" alt="Question Bank Page 3" class="qb-image">
+      <!-- Add more pages as needed -->
+    </div>
 
-<footer>
-  © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship | Jain (Deemed-to-be University)
-</footer>
+    <p style="font-size:0.9em; color:#777; text-align:center;">
+      🔒 This material is protected. Unauthorized reproduction is prohibited.
+    </p>
+  </section>
 
+  <footer>
+    © 2025 Prof. P. B. Rao | Strategic Leadership for Sustainable Entrepreneurship | Jain (Deemed-to-be University)
+  </footer>
+
+  <!-- Protection Script -->
+  <script>
+    // Disable right-click and keyboard shortcuts
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (
+        (e.ctrlKey && ['s','p','u','c'].includes(e.key.toLowerCase())) ||
+        e.key === 'PrintScreen'
+      ) {
+        e.preventDefault();
+        alert('Copying, printing and screenshots are disabled on this page.');
+      }
+    });
+  </script>
 </body>
 </html>
